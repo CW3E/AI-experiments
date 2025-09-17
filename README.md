@@ -3,7 +3,7 @@ This repository contains the scripts that generate the main results presented in
 
 * data_preparation: Scripts that download ERA5 data, generate the adjusted climatology for climatology constraint (CC) experiments, and convert them into a structure usable by GraphCast.
 * graphcast: A modified rollout.py script to replace the script in the GraphCast source code for constrained experiments.
-* inference: Scripts to generate predictions using GraphCast.
+* inference: Scripts to generate free or constrained predictions using GraphCast.
 * diagnosis: Scripts to calculate apparent heat source (Q1).
 * figures: Scripts that generate main figures in the manuscript.
 * utils: Some auxiliary functions.
