@@ -7,6 +7,7 @@ import cartopy.crs as ccrs
 import metpy.calc as mpcalc
 from metpy.units import units
 import metpy.constants as mpconsts
+import array_func as af
 
 dir_root = '/path/to/your/directory/'
 dir_output = '/path/to/graphcast/output/'
@@ -64,9 +65,13 @@ def calculate_q1(u_raw, v_raw, t_raw, w_raw, domain):
     return q1_noboundary.drop_vars('metpy_crs')
 
 
-startdate = '2021-06-21T00'
-enddate = '2021-06-29T00'
-lonlim, latlim = [90, 270], [0, 80]
+startdate = '2016-03-05T00'
+enddate = '2016-03-13T00'
+lonlim, latlim = [-100, 65], [10, 90]
+# startdate = '2021-06-21T00'
+# enddate = '2021-06-29T00'
+# lonlim, latlim = [90, 270], [0, 80]
+
 step_start = 0
 step_end = -1 
 
