@@ -1,5 +1,5 @@
-import os
-os.chdir('/path/to/your/directory/')
+import sys
+sys.path.append('../utils/')
 import numpy as np
 import xarray as xr
 import pandas as pd

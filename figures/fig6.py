@@ -1,5 +1,5 @@
-import os
-os.chdir('/expanse/nfs/cw3e/cwp179/')
+import sys
+sys.path.append('../utils/')
 import numpy as np
 import xarray as xr
 from scipy import stats
