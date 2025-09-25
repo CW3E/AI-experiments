@@ -1,4 +1,5 @@
-#%%
+import sys
+sys.path.append('../utils/')
 import xarray as xr
 import numpy as np
 import pandas as pd
@@ -27,8 +28,6 @@ enddate = utils.get_enddate(startdate, nday)
 year = datetime.strptime(startdate, "%Y-%m-%d").year
 mmdds = pd.date_range(startdate, enddate, freq='1D').strftime('%m%d')
 
-#%% climatology
-
 ds_clim = []
 for var in variables_slpl:
     print(var)
@@ -43,14 +42,11 @@ for var in variables_slpl:
     ds_dates = xr.concat(ds_dates, dim='time')
     ds_clim.append(ds_dates)
 
-#%%
-
 dates_range = utils.get_days_range(center_date_str, year=year, days_range_half=30)  # datetime.datetime
 mmdd_range = [date.strftime("%m%d") for date in dates_range]
 dates_range = [date.strftime("%Y-%m-%d") for date in dates_range]
 print(dates_range)
 
-#%%
 ## seasonal mean in that year
 year1 = int(dates_range[0][:4])
 year2 = int(dates_range[-1][:4])

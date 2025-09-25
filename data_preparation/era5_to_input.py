@@ -1,3 +1,5 @@
+import sys
+sys.path.append('../utils/')
 import xarray as xr
 import numpy as np
 import utils

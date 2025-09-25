@@ -1,3 +1,5 @@
+import sys
+sys.path.append('../utils/')
 import cdsapi
 import pandas as pd
 import utils
