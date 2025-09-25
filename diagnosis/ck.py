@@ -1,8 +1,10 @@
 import os
 os.chdir('/path/to/your/directory')  
+import sys
+sys.path.append('../utils/')
 import numpy as np
 import xarray as xr
-from utils_array import sellonlat
+from utils import sellonlat
 import cartopy.crs as ccrs
 import metpy.calc as mpcalc
 from metpy.units import units
