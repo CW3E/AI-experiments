@@ -307,6 +307,5 @@ eplt.addpatch(ax2, target_domain, lw=1.5, ec=target_color)
 eplt.addpatch(ax2, constrains_domain, lw=1.5, ec='r')
 eplt.addcolorbar(ax2, pic, ticks=pic.levels[::3], label='Q$_{1}$ (W m$^{-2}$)', **colorbar_kw) 
 
-
 fig.savefig(dir_fig+'figure2.png', dpi=300, bbox_inches='tight')
 fig.savefig(dir_fig+'figure2.pdf', dpi=300, bbox_inches='tight')

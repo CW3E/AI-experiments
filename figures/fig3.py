@@ -158,7 +158,6 @@ for i, step in enumerate(steps):
     z_diff, z_p = composite_diff(z_clim_constrained, z_constrained, equal_var=False)
     z_diff = af.sellonlat(z_diff, lonlim+latlim)
 
-
     ax1 = axs[i+1]
     eplt.formats(ax1, lonlim=lonlim, latlim=latlim, title=f'Day {(i+1)*2}')  # 
     # pic = eplt.contourf(ax1, z_diff, cmap=cmap, levels=levels, globe=True)
